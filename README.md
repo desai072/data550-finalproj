@@ -2,19 +2,43 @@
 
 > DATA 550, Spring 2024
 
-## Generating the Final Report
-
 The project directory contains a `Makefile` with rules to generate the final report. The final report will contain a brief introduction to the data and the analysis objectives, a Table 1 with a description, as well as a Figure 1 with a description.
 
-*In order to generate the final report, please type `Make` in the terminal window.*
+## Generating the Final Report (Option #1 Recommended):
 
-## Synchronizing the Package Repository
+## Option #1: Using Docker & DockerHub
+
+### Step 1: Building Docker Image
+
+The `Makefile` contains rules to pull or build the project image.
+
+*In order to build the image, please type `Make build` in the terminal window.*
+
+OR
+
+*In order to pull the image from DockerHub, please type `Make pull` in the terminal window.*
+
+### Step 2: Generate Final Report
+
+The `Makefile` contains a rule to run the image. This will generate the Final Report file locally in the project directory.
+
+-   Mac users: *Please type `Make report_mac` in the terminal window.*
+
+-   Windows users: *Please type `Make report_win` in the terminal window.*
+
+## Option #2: Generating the Final Report Locally
+
+### Synchronize the Package Repository
 
 The `Makefile` also contains a rule to synchronize a user's package repository with the set of packages used in the project.
 
-*In order to synchronize your package repository, please type `Make install` in the terminal window*
+*In order to synchronize your package repository, please type `Make install` in the terminal window.*
 
-## The Code Files
+### Generate Final Report
+
+*In order to generate the final report, please type `Make` in the terminal window.*
+
+## Project Organization
 
 The `code/00_Make_Clean.R` file cleans the data
 
